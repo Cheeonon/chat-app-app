@@ -29,7 +29,6 @@ const ChatRoomPage = () => {
   const scrollToBottom = () => {
     const lastMessage = document.querySelector(".chat-room__msg-list").lastElementChild;
 
-    console.log(lastMessage)
     if(lastMessage){
       lastMessage.scrollIntoView();
     }
@@ -44,7 +43,7 @@ const ChatRoomPage = () => {
     .catch(error => {
       console.log(error);
     })
-  }, [isNewMessage])
+  }, [isNewMessage,roomID])
 
   // keep the scroll bar the the bottom
   useEffect(()=>{

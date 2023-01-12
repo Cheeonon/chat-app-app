@@ -15,8 +15,6 @@ const FriendsListPage = () => {
   const [isAdded, setIsAdded] = useState(false);
   const [isError, setIsError] = useState(false);
 
-console.log(user)
-
   useEffect(()=>{
     getFriends({userID: user.id})
     .then(resolve => {
@@ -25,7 +23,7 @@ console.log(user)
     .catch(error => {
       console.log(error)
     })
-  },[])
+  },[user.id])
 
   if(!friendsList){
     return <h1>Loading....</h1>

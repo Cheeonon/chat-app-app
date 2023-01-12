@@ -20,7 +20,7 @@ const RoomListPage = () => {
     .catch(err => {
       console.log(err);
     })
-  }, [])
+  }, [user.id])
 
   if(!roomList){
     return <h1>Loading....</h1>
@@ -39,7 +39,7 @@ const RoomListPage = () => {
       </div>
       <ul className="room__list">
         {roomList.map(room => {
-          const roomUser = Object.keys(room.roomUsers).filter(singleUser => singleUser != user.id)[0];
+          const roomUser = Object.keys(room.roomUsers).filter(singleUser => singleUser !== user.id)[0];
           const roomUserName = room.roomUsers[roomUser];
           const profileURL = baseProfileURL + room.roomProfiles[roomUser];
 
