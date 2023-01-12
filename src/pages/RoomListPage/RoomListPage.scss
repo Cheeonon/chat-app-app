@@ -1,0 +1,85 @@
+@use '../../styles/partials/color' as *;
+@use '../../styles/partials/mixins' as *;
+
+.room{
+    @include screen;
+    display: flex;
+    border: 1.2px solid rgba(190, 190, 190, 0.705);
+    position: relative;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        padding: .8rem 1.5rem;
+        margin-top: 4rem;
+        width: 100%;
+    }
+
+    &__title{
+        position: absolute;
+        top: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    &__add{
+        position: absolute;
+        top: 1.4rem;
+        right: 1.4rem;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.06);
+        }
+
+        &-img{
+            width: 20px;
+        }
+    }
+
+    &__list{
+        width: 100%;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        margin: .5rem 0;
+    }
+
+    &__profile{
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        border-radius: 20px;
+        margin-right: .8rem;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+
+    &__name{
+        font-size: 1rem;
+        margin-bottom: .3rem;
+    }
+
+    &__chat{
+        font-size: .8rem;
+        color: rgb(150, 150, 150);
+    }
+
+    &__date{
+        position: absolute;
+        right: 0;
+        font-size: .8rem;
+        color: rgb(150, 150, 150);
+
+    }
+
+}

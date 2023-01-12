@@ -1,0 +1,31 @@
+@use './partials/color' as *;
+@use './partials/fonts' as *;
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  font-family: Kakao;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}

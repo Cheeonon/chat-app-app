@@ -1,0 +1,163 @@
+@use '../../styles/partials/color' as *;
+@use '../../styles/partials/mixins' as *;
+
+.chat-room{
+    @include screen;
+    display: flex;
+    background-color: $base-color;
+    flex-direction: column;
+    position: relative;
+
+    &__header{
+        width: 400px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border: .2px solid rgba(190, 190, 190, 0.705);
+        background-color: rgba(255, 255, 255, 0.95);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1;
+        position: relative;
+        font-size: 1.2rem;
+        color:rgb(73, 73, 73);
+
+        &-profile{
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            border-radius: 20px;
+            margin: .5rem;
+        }
+
+        &-name{
+            padding: .2rem;
+        }
+
+        &-back{
+            position: absolute;
+            right: 1rem;
+            
+            &:hover{
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    &__body{
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__msg{
+        &-list{
+            position: absolute;
+            bottom: 120px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-height: 100%;
+            overflow-y: scroll;
+        }
+
+        &-item{
+            display: flex;
+            position: relative;
+            margin: .5rem;
+            width: fit-content;
+
+            &--me{
+                align-self: flex-end;
+                margin-right: 1rem;
+            }
+        }
+
+        &-container{
+            display: flex;
+            flex-direction: column;
+            margin: 0 .5rem;
+        }
+    }
+
+
+    &__profile{
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        border-radius: 20px;
+    }
+
+    &__name{
+        font-size: .75rem;
+        margin-bottom: .3rem;
+        color: rgb(53, 53, 53);
+    }
+
+    &__message{
+        background-color: aliceblue;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        padding: .5rem;
+        font-size: .9rem;
+
+        &--me{
+            background-color: $point-color;
+            border-radius: 5px;
+            border-top-right-radius: 0;
+        }
+    }
+
+    &__date{
+        position: absolute;
+        right: -2.5rem; 
+        bottom: 0;
+        font-size: .65rem;
+        color: rgb(96, 95, 95);
+
+        &--me{
+            right: auto;
+            left: -3rem;
+        }
+    }
+
+
+    &__form{
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+        height: 100px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: .2px solid rgba(190, 190, 190, 0.705);
+
+    }
+
+    &__msg{
+        height: 100%;
+        width: 76%;
+        border: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    &__btn{
+        height: 75%;
+        width: 20%;
+        margin-left: .5rem;
+        border: .2px solid rgba(190, 190, 190, 0.705);
+        border-radius: 5px;
+        color: rgb(190, 190, 190);
+        background-color: rgba(242, 242, 242, 0.621);
+
+        &--valid{
+            background-color: $point-color;
+            color: black;
+        }
+    }
+}

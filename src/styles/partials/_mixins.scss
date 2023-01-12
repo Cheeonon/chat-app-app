@@ -1,0 +1,13 @@
+@mixin screen {
+    min-width: 400px;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(209, 209, 209);
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

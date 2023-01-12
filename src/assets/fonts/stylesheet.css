@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Kakao';
+    src: url('KakaoBold.woff2') format('woff2'),
+        url('KakaoBold.woff') format('woff'),
+        url('KakaoBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kakao';
+    src: url('KakaoLight.woff2') format('woff2'),
+        url('KakaoLight.woff') format('woff'),
+        url('KakaoLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Kakao';
+    src: url('KakaoRegular.woff2') format('woff2'),
+        url('KakaoRegular.woff') format('woff'),
+        url('KakaoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
