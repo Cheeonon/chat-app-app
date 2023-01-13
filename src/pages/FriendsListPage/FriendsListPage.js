@@ -11,7 +11,7 @@ const FriendsListPage = () => {
   const { user } = state;
   const [friendsList, setFriendsList] = useState(null);
   const [addFriend, setAddFriend] = useState(false);
-  const profileBaseURL = "http://localhost:3030/img/";
+  const profileBaseURL = "https://chat-app-apii.herokuapp.com/img/";
   const [isAdded, setIsAdded] = useState(false);
   const [isError, setIsError] = useState(false);
 

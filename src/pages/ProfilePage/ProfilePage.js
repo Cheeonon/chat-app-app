@@ -8,7 +8,7 @@ const ProfilePage = () => {
 
   const { state } = useLocation();
   const { user } = state;
-  const baseProfileURL = "http://localhost:3030/img/";
+  const baseProfileURL = "https://chat-app-apii.herokuapp.com/img/";
   const [userName, setUserName] = useState(user.name);
   const [isEditing, setIsEditing] = useState(false);
 

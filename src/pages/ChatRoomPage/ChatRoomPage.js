@@ -51,7 +51,7 @@ const ChatRoomPage = () => {
   }, [messageList])
 
   // connect to the server
-  const socket = io("http://localhost:3030", {
+  const socket = io("https://chat-app-apii.herokuapp.com/", {
     cors: { origin: "*" },
     transports: ["websocket"],
   });
