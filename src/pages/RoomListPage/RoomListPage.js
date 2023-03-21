@@ -10,7 +10,7 @@ const RoomListPage = () => {
   const {state} = useLocation();
   const user = state.user;
   const [roomList, setRoomList] = useState(null);
-  const baseProfileURL = "https://chat-app-apii.herokuapp.com/img/";
+  const baseProfileURL = "https://chat-app-api-production-65ff.up.railway.app/img/";
 
   useEffect(()=>{
     getRoomList({userID: user.id})

@@ -51,7 +51,7 @@ const ChatRoomPage = () => {
   }, [messageList])
 
   // connect to the server
-  const socket = io("https://chat-app-apii.herokuapp.com/", {
+  const socket = io("https://chat-app-api-production-65ff.up.railway.app/", {
     cors: { origin: "*" },
     transports: ["websocket"],
   });

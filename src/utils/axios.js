@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const PORT = 3030;
-const baseURL = `https://chat-app-apii.herokuapp.com`;
+const baseURL = `https://chat-app-api-production-65ff.up.railway.app`;
 
 export const signUp = (body) => {
     return axios.post(`${baseURL}/user/sign-up`, body)
